@@ -41,6 +41,26 @@ Esta documentación te permite explorar los endpoints disponibles, probar petici
    git clone https://github.com/crisisfb/CMPC-libros
    cd cmpc-libros
    ```
+
+   ---
+
+   ## Diagramas del Sistema
+
+   ### Diagrama de Arquitectura
+
+   El siguiente diagrama muestra la arquitectura general del sistema, incluyendo los principales componentes y su interacción:
+
+   ![Diagrama de Arquitectura](arquitectura.png)
+
+   ---
+
+   ### Diagrama Relacional
+
+   El modelo relacional de la base de datos está diseñado para gestionar libros, autores, géneros, editoriales y usuarios:
+
+   ![Diagrama Relacional](RM.png)
+
+   Puedes ver la descripción detallada en [`modelo-relacional.md`](./modelo-relacional.md).
 2. Configura los archivos `.env` en `cmpc-libros-back` y `cmpc-libros-front` según tus necesidades. Ejemplo:
    - `cmpc-libros-back/.env`
    - `cmpc-libros-front/.env`
@@ -64,6 +84,6 @@ Esta documentación te permite explorar los endpoints disponibles, probar petici
 ---
 
 ## Notas Adicionales
-- El backend expone una API REST documentada mediante Swagger (accede a `/api` en el backend si está habilitado).
+
 - El frontend consume la API del backend y muestra los datos en tablas y formularios interactivos.
 - Puedes modificar la configuración de puertos en el archivo `docker-compose.yml` si lo necesitas.
