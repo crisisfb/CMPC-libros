@@ -1,6 +1,15 @@
 # CMPC Libros
+# Repositorios de Submódulos
+
+Accede directamente a los repositorios de los submódulos:
+
+- [cmpc-libros-back (NestJS)](https://github.com/crisisfb/cmpc-libros-back)
+- [cmpc-libros-front (React/Vite)](https://github.com/crisisfb/cmpc-libros-front)
 ## Descripción
 
+CMPC Libros es una plataforma integral para la gestión de libros, autores, géneros y usuarios. Pensada para bibliotecas, editoriales o proyectos personales, permite administrar colecciones de libros, registrar autores, organizar géneros y gestionar usuarios de manera eficiente.
+
+El sistema está compuesto por un backend desarrollado en NestJS, un frontend moderno en React/Vite y una base de datos PostgreSQL, todo desplegado fácilmente mediante Docker Compose. Incluye documentación interactiva de la API para facilitar la integración y el desarrollo.
 
 ## Documentación de la API
 

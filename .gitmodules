@@ -1,0 +1,6 @@
+[submodule "cmpc-libros-back"]
+	path = cmpc-libros-back
+	url = https://github.com/crisisfb/cmpc-libros-back.git
+[submodule "cmpc-libros-front"]
+	path = cmpc-libros-front
+	url = https://github.com/crisisfb/cmpc-libros-front.git
