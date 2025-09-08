@@ -1,10 +1,14 @@
 # CMPC Libros
-
 ## Descripción
 
-CMPC Libros es una aplicación web para la gestión de libros, autores, géneros y usuarios. El stack incluye un backend en NestJS, un frontend en React/Vite, y una base de datos PostgreSQL, todo orquestado con Docker Compose para facilitar el despliegue local.
 
----
+## Documentación de la API
+
+El backend expone una documentación interactiva de la API REST utilizando Swagger. Puedes acceder a ella desde:
+
+- [http://localhost:3001/api](http://localhost:3001/api)
+
+Esta documentación te permite explorar los endpoints disponibles, probar peticiones y consultar los modelos de datos utilizados por la aplicación.
 
 ## Arquitectura y Decisiones de Diseño
 
