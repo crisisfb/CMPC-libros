@@ -25,7 +25,7 @@ CMPC Libros es una aplicación web para la gestión de libros, autores, géneros
 ### Pasos
 1. Clona el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/crisisfb/CMPC-libros
    cd cmpc-libros
    ```
 2. Configura los archivos `.env` en `cmpc-libros-back` y `cmpc-libros-front` según tus necesidades. Ejemplo:
