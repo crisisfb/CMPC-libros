@@ -1,0 +1,56 @@
+# CMPC Libros
+
+## Descripción
+
+CMPC Libros es una aplicación web para la gestión de libros, autores, géneros y usuarios. El stack incluye un backend en NestJS, un frontend en React/Vite, y una base de datos PostgreSQL, todo orquestado con Docker Compose para facilitar el despliegue local.
+
+---
+
+## Arquitectura y Decisiones de Diseño
+
+- **Backend:** NestJS (TypeScript) para una API robusta y escalable.
+- **Frontend:** React + Vite para una interfaz moderna y rápida.
+- **Base de datos:** PostgreSQL, elegida por su fiabilidad y soporte avanzado para datos relacionales.
+- **Orquestación:** Docker Compose permite levantar todo el stack con un solo comando, facilitando el desarrollo y pruebas locales.
+- **pgAdmin:** Herramienta gráfica para administrar la base de datos.
+- **Separación de carpetas:** El frontend y backend están desacoplados para facilitar el mantenimiento y despliegue independiente.
+
+---
+
+## Instalación y Configuración
+
+### Requisitos previos
+- Docker y Docker Compose instalados.
+
+### Pasos
+1. Clona el repositorio:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd cmpc-libros
+   ```
+2. Configura los archivos `.env` en `cmpc-libros-back` y `cmpc-libros-front` según tus necesidades. Ejemplo:
+   - `cmpc-libros-back/.env`
+   - `cmpc-libros-front/.env`
+3. Levanta el stack completo:
+   ```bash
+   docker-compose up --build
+   ```
+4. Accede a los servicios:
+   - **Frontend:** [http://localhost:5173](http://localhost:5173)
+   - **Backend:** [http://localhost:3001](http://localhost:3001)
+   - **pgAdmin:** [http://localhost:5050](http://localhost:5050)
+
+---
+
+## Guía de Uso
+
+1. Ingresa al frontend y regístrate o inicia sesión.
+2. Gestiona libros, autores, géneros y usuarios desde la interfaz.
+3. Administra la base de datos desde pgAdmin si lo requieres.
+
+---
+
+## Notas Adicionales
+- El backend expone una API REST documentada mediante Swagger (accede a `/api` en el backend si está habilitado).
+- El frontend consume la API del backend y muestra los datos en tablas y formularios interactivos.
+- Puedes modificar la configuración de puertos en el archivo `docker-compose.yml` si lo necesitas.

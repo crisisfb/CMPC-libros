@@ -1,0 +1,54 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    container_name: cmpc-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cmpc_books
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    container_name: cmpc-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+  back:
+    build:
+      context: ./cmpc-libros-back
+    container_name: cmpc-libros-back
+    restart: always
+    env_file:
+      - ./cmpc-libros-back/.env
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+
+  front:
+    build:
+      context: ./cmpc-libros-front
+    container_name: cmpc-libros-front
+    restart: always
+    env_file:
+      - ./cmpc-libros-front/.env
+    ports:
+      - "5173:5173"
+    depends_on:
+      - back
+
+volumes:
+  db_data:
